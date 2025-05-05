@@ -1,0 +1,140 @@
+/* Chessboard.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* General container styling */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px; /* Add spacing between sections */
+}
+
+/* Left and right sections */
+.left-side,
+.right-side {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.left-side {
+  flex: 1 1 600px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.right-side {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+/* Chessboard styling */
+.chessboard-container {
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Player info */
+.player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.player-info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: 5px 0; /* Add spacing between buttons */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Resign button */
+button[style*="background-color: red"] {
+  background-color: #dc3545;
+}
+
+button[style*="background-color: red"]:hover {
+  background-color: #c82333;
+}
+
+/* Move history table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px; /* Add spacing above the table */
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+/* Popup styling */
+.popup-message {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid black;
+  padding: 30px 50px;
+  font-size: 24px;
+  z-index: 1000;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side,
+  .right-side {
+    max-width: 100%;
+  }
+
+  .popup-message {
+    width: 90%;
+    font-size: 18px;
+  }
+}
